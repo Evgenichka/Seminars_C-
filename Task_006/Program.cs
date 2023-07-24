@@ -4,36 +4,35 @@
 // 7 -> нет
 
 
-Console.WriteLine("Введите целое число");
-int number = Convert.ToInt32(Console.ReadLine());
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Введите целое число");
+        int number = Convert.ToInt32(Console.ReadLine());
 
-if (number == 0)
+        if (number == 0)
 
-    Console.Write("Нулевое число");
+            Console.Write("Нулевое число");
 
-else if ( number > 0)
+        else if (number > 0)
 
-    if (number % 2 == 0) 
+            if (number % 2 == 0)
 
-        Console.Write(($"Введенное число является четным"));
+                Console.Write($"Введенное число является четным");
 
-    else 
+            else
 
-        Console.WriteLine(($"Введенное число нечетное"));
+                Console.WriteLine($"Введенное число нечетное");
 
-else 
+        else
 
-    if (number % 2 == 0)
+            if (number % 2 == 0)
 
-        Console.Write(($"Введенное число является четным"));
+            Console.Write($"Введенное число является четным");
 
-    else 
+        else
 
-        Console.Write(($"Введенное число нечетное"));
-
-   
-
-
-
-
-    
+            Console.Write($"Введенное число нечетное");
+    }
+}
