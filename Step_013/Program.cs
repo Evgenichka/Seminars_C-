@@ -4,19 +4,13 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.WriteLine("Введите трехзначное число");
-        int.TryParse(Console.ReadLine()!, out int x);
-
-        if (x > 999 || x < 100)
-        {
-            Console.WriteLine("Количество знаков не соответсвует трем!");
-            return;
-        }
-        int GetSecond(int x)
-        {
-            while (x >= 100) x /= 10;
-            int a = x % 10;
-            return a;
-        }
-        Console.WriteLine(GetSecond(x));
-
+Console.WriteLine("Введите число");
+int number = Convert.ToInt32(Console.ReadLine());
+string numberText = Convert.ToString(number);
+if (numberText.Length > 2)
+{ 
+    Console.WriteLine("Третья цифра числа ->" + numberText[2]);
+}
+else 
+{Console.WriteLine("Нет данных для вывода третьей цифры");
+}
