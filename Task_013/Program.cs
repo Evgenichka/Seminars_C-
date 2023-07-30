@@ -15,4 +15,3 @@ if (numberText.Length > 2)
 else 
 {Console.WriteLine("Нет данных для вывода третьей цифры");
 }
-    
