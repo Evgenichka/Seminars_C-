@@ -7,8 +7,8 @@ int x1 = Coordinate("x", "A");
 int x2 = Coordinate("x", "B");
 int y1 = Coordinate("y", "A");
 int y2 = Coordinate("y", "B");
-int h1 = Coordinate("z", "A");
-int h2 = Coordinate("z", "B");
+int h1 = Coordinate("h", "A");
+int h2 = Coordinate("h", "B");
 
 
 int Coordinate(string coorName, string pointName)
