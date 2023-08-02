@@ -6,18 +6,20 @@
 // 4 | 64
 // 5 | 125
 
-Console.Write("Введите число N: ");
-
-int N = Convert.ToInt32(Console.ReadLine());
-
-Console.Write("Таблица кубов:/N");
-
-for (int i=1; i<= N; i++)
- 
+internal class Program
 {
-int k = i*i*i;
+    private static void Main(string[] args)
+    {
+        Console.Write("Введите число N: ");
 
-Console.WriteLine($"{k}");
+        int N = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= N; i++)
+
+        {
+            int k = i * i * i;
+
+            Console.WriteLine($"{k}");
+        }
+    }
 }
-
-
