@@ -19,14 +19,16 @@ for (int i = 0; i < numbers.Length; i++)
 }
 Console.WriteLine($"Сумма элементов нечетных позиций = {result}");
 
-void FillArrayRandomNumbers(int [] array) 
+
+void FillArrayRandomNumbers(int [] array)
+{
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = new Random().Next(min, max);
     }
 }
 
-void PrintArray(int[] array) 
+void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -35,7 +37,7 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-int ReadInt(string message) 
+int ReadInt(string message)
 {
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
