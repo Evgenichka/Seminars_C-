@@ -28,6 +28,7 @@ void PrintSumm(int m, int n, int summ)
         Console.Write($"Результат не найден: введено ненатуральное число!" );
         return;
     }  
+    
     PrintSumm(m, n - 1, summ);
 }
 
