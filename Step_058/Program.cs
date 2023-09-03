@@ -17,7 +17,7 @@
 // 56 8 4 24
 // 10 6 24 49
 
-
+Console.WriteLine($"\nВведите размеры матриц и диапазон случайных значений:");
 int m = InputNumbers("Введите число строк 1-й матрицы: ");
 int n = InputNumbers("Введите число столбцов 1-й матрицы (и строк 2-й): ");
 int p = InputNumbers("Введите число столбцов 2-й матрицы: ");
@@ -25,18 +25,18 @@ int range = InputNumbers("Введите диапазон случайных ч�
 
 int[,] firstMartrix = new int[m, n];
 CreateArray(firstMartrix);
-Console.WriteLine($"Первая матрица: ");
+Console.WriteLine($"Первая матрица:  ");
 WriteArray(firstMartrix);
 
 int[,] secomdMartrix = new int[n, p];
 CreateArray(secomdMartrix);
-Console.WriteLine($"Вторая матрица: ");
+Console.WriteLine($"Вторая матрица:  ");
 WriteArray(secomdMartrix);
 
-int[,] resultMatrix = new int[m,p];
+int[,] resultMatrix = new int[m, p];
 
 MultiplyMatrix(firstMartrix, secomdMartrix, resultMatrix);
-Console.WriteLine($"Произведение матриц: ");
+Console.WriteLine($"Произведение первой и второй матриц:  ");
 WriteArray(resultMatrix);
 
 void MultiplyMatrix(int[,] firstMartrix, int[,] secomdMartrix, int[,] resultMatrix)
@@ -79,7 +79,7 @@ void WriteArray (int[,] array)
   {
     for (int j = 0; j < array.GetLength(1); j++)
     {
-      Console.Write(array[i,j] + " ");
+      Console.Write(array[i,j] + "  ");
     }
     Console.WriteLine();
   }
