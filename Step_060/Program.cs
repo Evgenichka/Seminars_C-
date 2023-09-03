@@ -1,4 +1,5 @@
-﻿//Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+﻿//Задача 60.
+//Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
 //Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 //Массив размером 2 x 2 x 2
 //66(0,0,0) 25(0,1,0)
@@ -6,62 +7,49 @@
 //27(0,0,1) 90(0,1,1)
 //26(1,0,1) 55(1,1,1)
 
-Console.WriteLine("Количество листов: ");
-int lists = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Количество строк: ");
-int rows = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Количество столбцов: ");
-int columns = int.Parse(Console.ReadLine()!);
-Console.WriteLine();
 
- 
-int minRandom = 12;
-int maxRandom = 99;
+// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// Массив размером 2 x 2 x 2
+// 66(0,0,0) 25(0,1,0)
+// 34(1,0,0) 41(1,1,0)
+// 27(0,0,1) 90(0,1,1)
+// 26(1,0,1) 55(1,1,1)
 
-int[,,] matrix = GetMatrix(rows, columns, lists, minRandom, maxRandom); 
-PrintIndexMatrix(matrix);
-Console.WriteLine();
 
-int[,,] GetMatrix(int row, int colmn, int list, int min, int max) 
+int[,,] array3D = new int[2, 2, 2];
+FillArray(array3D);
+PrintIndex(array3D);
+
+
+// Функция вывода индекса элементов 3D массива
+void PrintIndex(int[,,] arr)
 {
-    int[,,] array = new int[lists, rows, columns];
-    int[,,] rnd = new int.Random;
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array3D.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array3D.GetLength(1); j++)
         {
-            for (int k = 0; k < array.GetLength(2); k++)
+            Console.WriteLine();
+            for (int k = 0; k < array3D.GetLength(2); k++)
             {
-                if (minRandom<=maxRandom)
-                {
-                    array[i, j, k] = minRandom;
-                    minRandom++;
-                }
-                else
-                {
-                Console.WriteLine("Программа не расчичитана на генерацию массивов с числами больше 99");
-                }
-            return (array[i, j, k]);
+                Console.Write($"{array3D[i, j, k]}({i},{j},{k}) ");
             }
-
         }
     }
-    return array;
 }
 
-void PrintIndexMatrix(int[,,] array) 
+// Функция заполнения 3D массива не повторяющимеся числами
+void FillArray(int[,,] arr)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    int count = 10;
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        Console.WriteLine((i ++));
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
-            for (int k = 0; k < array.GetLength(2); k++)
+            for (int k = 0; k < arr.GetLength(2); k++)
             {
-                 Console.Write($"{array[i, j, k]}({i},{j},{k}) ");
+                arr[k, i, j] += count;
+                count += 3;
             }
-            Console.WriteLine();
         }
-        Console.WriteLine();
     }
 }
