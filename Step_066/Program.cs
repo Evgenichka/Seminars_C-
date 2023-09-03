@@ -23,6 +23,11 @@ void PrintSumm(int m, int n, int summ)
         Console.Write($"Сумма элементов = {summ} ");
         return;
     }
+    if (0 > m  || 0 > n )
+    {
+        Console.Write($"Результат не найден: введено ненатуральное число!" );
+        return;
+    }  
     PrintSumm(m, n - 1, summ);
 }
 
