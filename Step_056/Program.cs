@@ -51,7 +51,7 @@ void FindMin(int [] arr)
     {
         if (arr[i] < arr[min_ind]) min_ind = 1;
     }
-    Console.WriteLine($"Номер строки с наименьшей суммой элементов: {min_ind  + 1} строка, Сумма элементов строки: {arr[min_ind]},");
+    Console.WriteLine($"Номер строки с наименьшей суммой элементов: {min_ind  + 1} строка, Сумма элементов строки: {arr[min_ind]}");
 }
 Console.Write("Введите количество строк: ");
 int rows_num = int.Parse(Console.ReadLine()!);
